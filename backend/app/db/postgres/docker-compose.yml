@@ -1,0 +1,11 @@
+version: "1"
+services:
+  db:
+    image: "postgres:11"
+    container_name: "webdev-pg"
+    ports:
+      - "54320:5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+volumes:
+  dbdata:
